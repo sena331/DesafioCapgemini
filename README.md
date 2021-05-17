@@ -28,6 +28,12 @@ Passo 7 - Inserir o componente na Home Page
 
 ![home](https://user-images.githubusercontent.com/37751099/118423606-c7034b00-b69b-11eb-8e63-4d5a55aa5f9c.jpeg)
 
+Passo 8 - Retorne a Home e faça uma busca
+
+![Teste1](https://user-images.githubusercontent.com/37751099/118424066-ccad6080-b69c-11eb-83ac-9bd3bda01a9a.jpeg)
+
+![Teste2](https://user-images.githubusercontent.com/37751099/118424070-d0d97e00-b69c-11eb-8599-3168a0213e4f.jpeg)
+
 
 
 
