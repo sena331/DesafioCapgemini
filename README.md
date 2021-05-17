@@ -20,13 +20,14 @@ Passo 5 - Crie as classes Apex no Developer Console com os mesmos nomes dos arqu
 
 ![Apex](https://user-images.githubusercontent.com/37751099/118423131-b2728300-b69a-11eb-8348-26689ba50df2.jpeg)
 
-Passi 6 - Crie os Componente Aura CadastrarAnuncios e cole o conteudo do componente da pasta do git.
+Passi 6 - Crie o Componente Aura CadastrarAnuncios e cole o conteudo do componente da pasta do git.
 
 ![Aura](https://user-images.githubusercontent.com/37751099/118423145-bc948180-b69a-11eb-8935-8ec2a6039f0f.jpeg)
 
 Passo 7 - Inserir o componente na Home Page
 
-![Componente](https://user-images.githubusercontent.com/37751099/118419292-f01ede00-b691-11eb-8ced-cb07e50f7226.jpeg)
+![home](https://user-images.githubusercontent.com/37751099/118423606-c7034b00-b69b-11eb-8e63-4d5a55aa5f9c.jpeg)
+
 
 
 
