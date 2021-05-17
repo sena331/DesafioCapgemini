@@ -16,7 +16,15 @@ Passo 4 - Criar um novo registro do objeto Anuncio
 
 ![registro](https://user-images.githubusercontent.com/37751099/118419329-0f1d7000-b692-11eb-9d12-1224c6503294.jpeg)
 
-Passo 5 - Inserir o componente na Home Page
+Passo 5 - Crie as classes Apex no Developer Console com os mesmos nomes dos arquivos .cls e cole o conteúdo dos arquivos no corpo das classes.
+
+![Apex](https://user-images.githubusercontent.com/37751099/118423131-b2728300-b69a-11eb-8348-26689ba50df2.jpeg)
+
+Passi 6 - Crie os Componente Aura CadastrarAnuncios e cole o conteudo do componente da pasta do git.
+
+![Aura](https://user-images.githubusercontent.com/37751099/118423145-bc948180-b69a-11eb-8935-8ec2a6039f0f.jpeg)
+
+Passo 7 - Inserir o componente na Home Page
 
 ![Componente](https://user-images.githubusercontent.com/37751099/118419292-f01ede00-b691-11eb-8ced-cb07e50f7226.jpeg)
 
