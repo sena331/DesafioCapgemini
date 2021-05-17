@@ -1,0 +1,85 @@
+<aura:component controller="CadastroAnunciosController" implements="force:appHostable,flexipage:availableForAllPageTypes,force:lightningQuickActionWithoutHeader,force:hasRecordId" >
+    
+    <aura:attribute name="nome" type="String"/>
+    <aura:attribute name="cliente" type="String"/>
+    <aura:attribute name="dataInicio" type="Date"/>
+    <aura:attribute name="dataTermino" type="date"/>
+    <aura:attribute name="investimento" type="Decimal"/>
+    <aura:attribute name="step" type="Integer" default="0"/>
+    <aura:attribute name="lstAnuncio" type="CadastroAnunciosController.Anuncio[]"/>
+    
+    <aura:attribute name="cliques" type="String"/>
+    <aura:attribute name="visualizacoes" type="String"/>
+    <aura:attribute name="compartilhamentos" type="String"/>
+    <aura:attribute name="mensagem" type="String"/>
+	
+    <lightning:card  title="Buscador de Anúncios" footer=" ">
+    <aura:if isTrue="{! v.step == 0 }">
+    
+    	<lightning:input type="text" label="Cliente" value="{!v.cliente}" />
+        
+        <lightning:input type="date" label="Data de início" value="{!v.dataInicio}" />
+        
+        <lightning:input type="date" label="Data de término" value="{!v.dataTermino}" />
+    
+        <lightning:button variant="brand" label="Cancelar" onclick="{!c.handleCancelar}"/>
+        
+        <lightning:button variant="brand" label="Buscar" onclick="{!c.handleBuscar}"/>  
+        
+        <aura:set attribute="else">
+            <aura:if isTrue="{! v.step == 1 }">
+                <div class="demo-only demo-only--sizing slds-grid slds-wrap">
+                    <div class="slds-col slds-size_6-of-6 slds-align_absolute-center">                    
+                        <table class="slds-table slds-table_striped">
+                            <thead>
+                                <tr>
+                                    <th scope="colgroup" colspan="5"><div class="slds-grid_align-center slds-align_absolute-center"> <b>Anúncios</b> </div></th>
+                                </tr>
+                                <tr>                      
+                                    <th scope="col" class="slds-truncate slds-text-align_center"><b>Nome</b></th>
+                                    <th scope="col" class="slds-truncate slds-text-align_center"><b>Valor total investido</b></th>
+                                    <th scope="col" class="slds-truncate slds-text-align_center"><b>Quantidade máxima de visualizações</b></th>
+                                    <th scope="col" class="slds-truncate slds-text-align_center"><b>Quantidade máxima de cliques</b></th>
+                                    <th scope="col" class="slds-truncate slds-text-align_center"><b>Quantidade máxima de compartilhamentos</b></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <aura:iteration items="{!v.lstAnuncio}" var="wrap" indexVar="rowindex">
+                                    <tr class="slds-box">
+                                        <td>
+                                            <div class="slds-text-align_center">{!wrap.nomeAnuncio}</div>
+                                        </td>
+                                        <td>
+                                            <div class="slds-text-align_center">{!wrap.investimento}</div>
+                                        </td>
+                                        <td>
+                                            <div class="slds-text-align_center">{!wrap.visualizacoes}</div>
+                                        </td>
+                                        <td>
+                                            <div class="slds-text-align_center">{!wrap.cliques}</div>
+                                        </td>
+                                         <td>
+                                            <div class="slds-text-align_center">{!wrap.compartilhamentos}</div>
+                                        </td>
+                                    </tr>
+                                </aura:iteration>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <lightning:button variant="brand" label="Voltar" onclick="{!c.handleVoltar}"/> 
+                
+                <lightning:button variant="brand" label="Finalizar" onclick="{!c.handleCancelar}"/> 
+            </aura:if>
+        </aura:set>  
+    </aura:if>
+        <aura:if isTrue="{! v.step == 2 }">
+            
+            <b><p> {!v.mensagem}</p></b>
+            <lightning:button variant="brand" label="Voltar" onclick="{!c.handleVoltar}"/> 
+            
+            <lightning:button variant="brand" label="Finalizar" onclick="{!c.handleCancelar}"/> 
+            
+        </aura:if>
+     </lightning:card>
+</aura:component>
